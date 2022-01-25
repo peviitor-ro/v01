@@ -1,7 +1,8 @@
 function getRandom() {
+
 	var serverurl;
 if (window.location.hostname==='localhost') {
-	 serverurl = 'http://localhost:81/git/api.peviitor.ro';
+	 serverurl = 'https://api.peviitor.ro';
 }
  else {
 	 serverurl ='https://api.peviitor.ro';
@@ -27,3 +28,5 @@ fetch(url_r)
 })
 .catch(err => console.log(err));
 }
+getRandom()
+setInterval(getRandom, 5000) // la fiecare 5 secunda
