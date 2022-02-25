@@ -299,6 +299,10 @@ template {
   display: none;
 }
 
+.hidden{
+    display: none;
+}
+
 [hidden] {
   display: none;
 }
@@ -591,6 +595,7 @@ legend {
   text-align: right;
 }
 
+
 .meeting {
   position: absolute;
   bottom: 10px;
@@ -602,12 +607,13 @@ legend {
 }
 
 .pages {
-  position: static;
-  margin-top: 640px;
-  bottom: 0;
-  font-size: 18px;
-  left: 10%;
-  transform: none;
+    position: absolute;
+    bottom: -330px;
+    right: 10%;
+  
+    color: sandybrown;
+    font-family: "Oswald";
+    font-size: 18px;
 }
 
 @media (min-width: 640px) {
