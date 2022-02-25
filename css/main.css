@@ -778,8 +778,8 @@ legend {
 		margin-top: 55px;
     }
 	.pages {
-		position: relative;
-        margin-top: 40px;
+		position: absolute;
+        bottom: 10px;
         font-size: 2em;
         left: 10%;
         transform: none;
