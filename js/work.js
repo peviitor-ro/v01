@@ -11,6 +11,7 @@ return false }
 if (qisset()) {
 	addclassupsearch("s129","upsearch");
 	document.body.classList.add("body_bck");
+	
 	search();
 	getRandom();
 	
