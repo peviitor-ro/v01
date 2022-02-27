@@ -100,7 +100,7 @@ function showPages(max) {
   if (start == 1) {
     start = 2;
   }
-  pagemax = start + 2;
+  pagemax = start + 10;
   if (pagemax > max) {
     pagemax = max + 1;
   }

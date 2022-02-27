@@ -64,10 +64,13 @@ label {
 
 .company {
   color: aquamarine;
+  display:inline-block;
+  padding-right: 0.5em;
 }
 
 .location {
   color: antiquewhite;
+  display: inline-block
 }
 
 ul {
@@ -607,9 +610,9 @@ legend {
 }
 
 .pages {
-    position: absolute;
-    bottom: -330px;
-    right: 10%;
+    position: fixed;
+    bottom: 3px;
+    left: 40%;
   
     color: sandybrown;
     font-family: "Oswald";
@@ -857,3 +860,4 @@ legend {
 p {
   border-bottom: 1px solid aqua;
 }
+
