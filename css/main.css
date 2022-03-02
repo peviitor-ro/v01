@@ -612,7 +612,7 @@ legend {
 .pages {
     position: fixed;
     bottom: 3px;
-    left: 40%;
+    left: 50%;
   
     color: sandybrown;
     font-family: "Oswald";
@@ -644,6 +644,12 @@ legend {
     right: auto;
     left: 10px;
   }
+
+  .pages {
+    position: fixed;
+    bottom: 3px;
+    left:50%;
+}
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
@@ -817,7 +823,7 @@ legend {
   box-shadow: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 855px) {
   .promo {
     display: none;
   }
@@ -827,20 +833,23 @@ legend {
   }
 
   .s129 form .inner-form .input-field input {
-    padding-left: 45px;
+    padding-left: 35px;
     font-size: 16px;
     margin-top: 55px;
   }
-  .pages {
-    position: absolute;
-    bottom: 10px;
-    font-size: 2em;
-    left: 10%;
-    transform: none;
-  }
+ 
   .results {
     position: relative;
-    margin-left: 0.1em;
+    display: block;
+    margin-left: 0em;
+    padding-left: 0.5em;
+  }
+  .pages {
+    position: fixed;
+    display:block;
+    bottom: 10px;
+    font-size: 1em;
+    left:65%;
   }
 
   .s129 form .inner-form .input-field .btn-search svg {

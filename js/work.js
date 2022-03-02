@@ -9,7 +9,7 @@
 if (qisset()) {
   addclassupsearch("s129", "upsearch");
   document.body.classList.add("body_bck");
-  document.getElementById("meeting").classList.add('hidden');
+  document.getElementById("meeting").classList.add("hidden");
   search();
   getRandom();
 } else {
@@ -35,7 +35,7 @@ function total(xurl) {
         var ser_message = JSON.parse(text);
         var total = ser_message.response.numFound;
         if (total === 0) {
-          rezno = "Nu avem nici o oportunitate pe moment";
+          rezno = "Nu avem nici o oportunitate momentan";
         } else {
           rezno = "Avem " + total + " oportunități";
         }
@@ -88,7 +88,7 @@ function showcities() {
 function page(number) {
   var urltext = window.location.href;
   var url = new URL(urltext);
-  url.searchParams.set("start", (number - 1) * 10);
+  url.searchParams.set("start", (number - 1) * 10 ) ;
   document.getElementById("page_" + number).href = url.href;
 }
 
@@ -96,11 +96,11 @@ function showPages(max) {
   var qs = new URLSearchParams(window.location.search);
   var start = qs.get("start");
   var pagemax;
-  start = Math.round(start / 10) + 1;
+  start = Math.round(start / 10) + 1; 
   if (start == 1) {
     start = 2;
   }
-  pagemax = start + 10;
+  pagemax = start + 2;
   if (pagemax > max) {
     pagemax = max + 1;
   }
@@ -108,9 +108,19 @@ function showPages(max) {
   for (i = start - 1; i < pagemax; i++) {
     pages += "<span ><a href='' id='page_" + i + "'>[ " + i + " ]</a></span>";
   }
+  if (start < max-1)  {
+    pages += "<span>...</span>" + "<span ><a href='' id='page_" + max + "'>[ " + max + " ]</a></span>";
+  }
   document.getElementById("pages").innerHTML = pages;
 
   for (i = start - 1; i < pagemax; i++) {
     page(i);
   }
+   
+  
 }
+
+
+
+
+
