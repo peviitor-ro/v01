@@ -10,8 +10,14 @@ if (qisset()) {
   addclassupsearch("s129", "upsearch");
   document.body.classList.add("body_bck");
   document.getElementById("meeting").classList.add("hidden");
+
+  var qs = new URLSearchParams(window.location.search);
+  var textsearch = qs.get("q");
+
   search();
   getRandom();
+  document.getElementById("search").value = textsearch;
+
 } else {
   var serverurl;
   if (window.location.hostname === "localhost") {
