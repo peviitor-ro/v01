@@ -92,6 +92,12 @@ function page(number) {
   document.getElementById("page_" + number).href = url.href;
 }
 
+function current_page() {
+  var qs = new URLSearchParams(window.location.search);
+  var current = qs.get("start")/10+1;
+  document.getElementById("page_" + current ).setAttribute("class", "highlighted");
+}
+
 function showPages(max) {
   var qs = new URLSearchParams(window.location.search);
   var start = qs.get("start");
@@ -124,6 +130,7 @@ function showPages(max) {
   // to add the HREF for the last page we call the function page with parameter pages
     page(pages);
   
+    current_page()
 }
 
 

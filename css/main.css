@@ -870,3 +870,7 @@ p {
   border-bottom: 1px solid aqua;
 }
 
+.highlighted {
+  font-size: 1.4em;
+  color: aquamarine;
+}
