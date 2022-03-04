@@ -7,3 +7,4 @@
 
   tester:
    Sebastian Boga
+   Niculina Moldovan
