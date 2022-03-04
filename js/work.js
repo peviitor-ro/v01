@@ -104,19 +104,25 @@ function showPages(max) {
   if (pagemax > max) {
     pagemax = max + 1;
   }
-  var pages = "";
+  var xpages = "";
   for (i = start - 1; i < pagemax; i++) {
-    pages += "<span ><a href='' id='page_" + i + "'>[ " + i + " ]</a></span>";
+    xpages += "<span ><a href='' id='page_" + i + "'>[ " + i + " ]</a></span>";
   }
   if (start < max-1)  {
-    pages += "<span>...</span>" + "<span ><a href='' id='page_" + max + "'>[ " + max + " ]</a></span>";
+    xpages += "<span>...</span>" + "<span ><a href='' id='page_" + max + "'>[ " + max + " ]</a></span>";
+    
+    
   }
-  document.getElementById("pages").innerHTML = pages;
+  document.getElementById("pages").innerHTML = xpages;
 
   for (i = start - 1; i < pagemax; i++) {
     page(i);
   }
-   
+
+  // in main you have number of pages in the global variable pages
+  // the function page is adding the HREF for the a markup for each page with id page_{id}
+  // to add the HREF for the last page we call the function page with parameter pages
+    page(pages);
   
 }
 
