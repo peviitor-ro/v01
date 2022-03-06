@@ -48,12 +48,17 @@ function showResults(item, index) {
  item_html = item_html + "<li><p>";
  item_html = item_html + "<label class='job_title'>"+"<a href='"+ item.job_link +"' target=_blank>"+ item.job_title +"</a>" +"</label>";
  item_html = item_html + "<label class='company'>"  + item.company +  "</label>";
-  if (item.city==="undefined") {
-	item_html = item_html + "<label class='location'>"  + item.city +", "+item.country +" </label>";
-  } else {
-    item_html = item_html + "<label class='location'>"  + item.remote +", "+item.country +" </label>";
-  }
+ item_html = item_html + "<label class='location'>" ;
+
+ if (typeof item.remote !== 'undefined')  {
+	item_html = item_html +  item.remote +" ";}
  
+
+	if (typeof item.city !== 'undefined') {
+      item_html = item_html +  item.city ;
+     }
+
+ item_html = item_html + ", "+item.country +" </label>"
  item_html = item_html + "</p></li>";
  
  document.getElementById("results").innerHTML = item_html;
