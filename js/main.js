@@ -22,8 +22,9 @@ fetch(url)
 				var ser_message = JSON.parse(text);
 				var results_nr = ser_message.response.numFound;
 				    
-					pages = Math.floor(results_nr / 10)+1;
+					pages = Math.floor((results_nr-1) / 10)+1;
 				if (typeof pages !== 'undefined') {
+					if (pages>1)
 						showPages(pages);}
 	
 					
