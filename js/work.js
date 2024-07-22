@@ -26,7 +26,7 @@ if (qisset()) {
     serverurl = "https://api.peviitor.ro";
   }
 
-  total(serverurl + "/v0/search/?q=*%3A*&rows=0");
+  total(serverurl + "/v3/search/?q=*%3A*&rows=0");
   getRandom();
 }
 

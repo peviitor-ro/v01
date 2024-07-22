@@ -2,9 +2,6 @@
 
   developer:
     Sergiu Avram
-    Sebastian Dugheana
-    Sorina Zorila
 
   tester:
    Sebastian Boga
-   Niculina Moldovan

@@ -8,7 +8,7 @@ if (window.location.hostname==='localhost') {
 	 serverurl ='https://api.peviitor.ro';
  }	
 	
-var url_r = serverurl + '/v0/random/';
+var url_r = serverurl + '/v3/random/';
 fetch(url_r)
    .then(function(response) {
              response.text().then(function(text) {
