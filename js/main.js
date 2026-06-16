@@ -25,15 +25,20 @@ fetch(url)
 					pages = Math.floor(results_nr / 10)+1;
 				if (typeof pages !== 'undefined') {
 						showPages(pages);}
-	
+
 					
 				var docs = ser_message.response.docs;
 				var rezno ="";
 				if (  results_nr === 0 ) {rezno = "nici un rezultat";} else {  rezno = results_nr + " rezultate, " +pages+" pagini" ; }
 				document.getElementById("resultsno").innerHTML = rezno ;
-				
+					
+				// FIXED: Reset item_html before building results
+				item_html = "";
 				
 				docs.forEach(showResults);
+				
+				// FIXED: Set innerHTML once after all items are processed
+				document.getElementById("results").innerHTML = item_html;
 				
   });
 })
@@ -58,8 +63,7 @@ function showResults(item, index) {
  item_html = item_html + " </label>"
  item_html = item_html + "</p></li>";
  
- document.getElementById("results").innerHTML = item_html;
+ // FIXED: Removed the innerHTML assignment from here
+ // It was overwriting on every forEach iteration
+ // Now we set it once in the search() function after the loop completes
 }
-
-
-
