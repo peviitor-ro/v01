@@ -832,6 +832,13 @@ legend {
   box-shadow: none;
 }
 
+@media screen and (min-width: 856px) {
+  .s129 form {
+    margin-left: 90px;
+    margin-right: 370px;
+  }
+}
+
 @media screen and (max-width: 855px) {
   .promo {
     display: none;
