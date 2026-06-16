@@ -740,12 +740,10 @@ legend {
 }
 
 .s129 {
-  flex: 1;
+  min-height: 100vh;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
+  flex-direction: column;
   align-items: center;
   font-family: Oswald, sans-serif;
   background: url(../images/search-bg.jpg);
@@ -755,6 +753,7 @@ legend {
 }
 
 .s129 form {
+  margin: auto;
   width: 100%;
   max-width: 390px;
 }
@@ -885,9 +884,7 @@ p {
 }
 
 footer {
-  margin-top: 40px;
-  padding: 30px 20px;
-  background: #1a1a2e;
+  padding: 10px;
   color: #ccc;
   font-size: 14px;
   text-align: center;
@@ -897,7 +894,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .footer-social a {
@@ -920,41 +917,7 @@ footer {
   display: block;
 }
 
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
-}
-
-.footer-section {
-  text-align: left;
-  min-width: 160px;
-}
-
-.footer-section h3 {
-  color: #fff;
-  font-size: 14px;
-  margin: 0 0 8px;
-  text-transform: uppercase;
-}
-
-.footer-section a {
-  display: block;
-  color: #aaa;
-  text-decoration: none;
-  padding: 2px 0;
-  font-size: 13px;
-}
-
-.footer-section a:hover {
-  color: #fff;
-}
-
 .footer-bottom {
-  border-top: 1px solid #333;
-  padding-top: 16px;
   font-size: 12px;
   color: #888;
 }
@@ -966,12 +929,4 @@ footer {
 
 .footer-bottom a:hover {
   color: #fff;
-}
-
-.footer-main-link {
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #fff !important;
 }
