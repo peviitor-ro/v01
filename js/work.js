@@ -13,6 +13,7 @@ if (qisset()) {
 
   var qs = new URLSearchParams(window.location.search);
   var textsearch = qs.get("q");
+  document.title = "SERP PEVIITOR.RO - " + textsearch;
 
   search();
   getRandom();
@@ -28,6 +29,15 @@ if (qisset()) {
 
   total(serverurl + "/v1/search/?q=*%3A*&rows=0");
   getRandom();
+}
+
+function handleSearch(event) {
+  var q = document.getElementById("search").value.trim();
+  if (!q) {
+    event.preventDefault();
+    return false;
+  }
+  return true;
 }
 
 function addclassupsearch(id, classs) {

@@ -613,10 +613,15 @@ legend {
     position: fixed;
     bottom: 3px;
     left: 50%;
-  
+    transform: translateX(-50%);
     color: sandybrown;
     font-family: "Oswald";
     font-size: 18px;
+    z-index: 10;
+}
+
+.results {
+    padding-bottom: 60px;
 }
 
 @media (min-width: 640px) {
@@ -649,6 +654,8 @@ legend {
     position: fixed;
     bottom: 3px;
     left:50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 }
 
