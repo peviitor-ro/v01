@@ -77,8 +77,8 @@ function showcities() {
         var ser_message = JSON.parse(text);
         var cities = ser_message.facet_counts.facet_fields.city;
 
-        //	   if (  total === 0 ) {rezno = "Nu avem nici o oportunitate pe moment";} else {  rezno = "Avem "+ total + " oportunități"; }
-        //		document.getElementById("resultsno").innerHTML = rezno ;
+        //	   if (  total === 0 ) {rezno = "Nu avem nici o oportunitate pe moment";} else {  rezno = "Avem \"+ total + \" oportunități\"; }
+        //	\tdocument.getElementById(\"resultsno\").innerHTML = rezno ;
 
         while (++i < cities.length) {
           if (i % 2 === 0) {
@@ -148,8 +148,3 @@ function showPages(max) {
   
     current_page()
 }
-
-
-
-
-
