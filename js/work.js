@@ -135,7 +135,12 @@ function showPages(max) {
     
     
   }
-  document.getElementById("pages").innerHTML = xpages;
+  
+  // Safety check - only set innerHTML if element exists
+  var pagesElement = document.getElementById("pages");
+  if (pagesElement) {
+    pagesElement.innerHTML = xpages;
+  }
 
   for (i = start - 1; i < pagemax; i++) {
     page(i);
