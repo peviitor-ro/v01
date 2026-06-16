@@ -1,4 +1,4 @@
-﻿function qisset() {
+function qisset() {
   var field = "q";
   var url = window.location.href;
   if (url.indexOf("?" + field + "=") != -1) return true;
@@ -26,7 +26,7 @@ if (qisset()) {
     serverurl = "https://api.peviitor.ro";
   }
 
-  total(serverurl + "/v3/search/?q=*%3A*&rows=0");
+  total(serverurl + "/v1/search/?q=*%3A*&rows=0");
   getRandom();
 }
 

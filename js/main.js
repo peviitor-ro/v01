@@ -10,7 +10,7 @@ if (window.location.hostname==='localhost') {
  else {
 	 serverurl ='https://api.peviitor.ro';
  }
-var url = serverurl + '/v3/search/?'+q_s;
+var url = serverurl + '/v1/search/?'+q_s;
 var item_html = "";
 
 function search () {
@@ -43,22 +43,19 @@ fetch(url)
 
 
 function showResults(item, index) {
-  //console.log(index);
 
  item_html = item_html + "<li><p>";
- item_html = item_html + "<label class='job_title'>"+"<a href='"+ item.job_link +"' target=_blank>"+ item.job_title +"</a>" +"</label>";
+ item_html = item_html + "<label class='job_title'>"+"<a href='"+ item.url +"' target=_blank>"+ item.title +"</a>" +"</label>";
  item_html = item_html + "<label class='company'>"  + item.company +  "</label>";
  item_html = item_html + "<label class='location'>" ;
 
- if (typeof item.remote !== 'undefined')  {
+ if (item.remote)  {
 	item_html = item_html +  item.remote +" ";}
- 
 
-	if (typeof item.city !== 'undefined') {
-      item_html = item_html +  item.city ;
-     }
+	var loc = item.location || item.city || [];
+	item_html = item_html + loc.join(', ');
 
- item_html = item_html + ", "+item.country +" </label>"
+ item_html = item_html + " </label>"
  item_html = item_html + "</p></li>";
  
  document.getElementById("results").innerHTML = item_html;
