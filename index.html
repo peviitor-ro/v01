@@ -146,6 +146,8 @@ placeholder="ce vrei să te faci când vei fi mare?"
 
 </div>
 
+<div id="pages"></div>
+
 <div class="meeting" id="meeting">
 
 Miercuri de la 18:30
@@ -424,7 +426,10 @@ function showPages(max) {
     
     
   }
-  document.getElementById("pages").innerHTML = xpages;
+  var pagesElement = document.getElementById("pages");
+  if (pagesElement) {
+    pagesElement.innerHTML = xpages;
+  }
 
   for (i = start - 1; i < pagemax; i++) {
     page(i);
