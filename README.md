@@ -1,10 +1,10 @@
 # PEVIITOR.RO — Frontend
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fpeviitor.ro&label=peviitor.ro)](https://peviitor.ro)
 [![API](https://img.shields.io/website?url=https%3A%2F%2Fapi.peviitor.ro%2F&label=api.peviitor.ro)](https://api.peviitor.ro/)
 [![SOLR](https://img.shields.io/website?url=https%3A%2F%2Fsolr.peviitor.ro%2Fsolr%2F&label=solr.peviitor.ro)](https://solr.peviitor.ro/solr/)
 ![GitHub Pages](https://img.shields.io/github/deployments/peviitor-ro/v01/github-pages?label=GitHub%20Pages)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Frontend for [peviitor.ro](https://peviitor.ro), a job search platform that aggregates jobs from multiple Romanian companies into a single searchable interface.
 
